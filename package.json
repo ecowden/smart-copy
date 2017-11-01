@@ -1,0 +1,56 @@
+{
+  "name": "smart-copy",
+  "version": "0.1.0",
+  "description": "Shortcuts for copying properties to new objects with defaults",
+  "author": "Evan Cowden <evan38109@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "nyc ava --verbose",
+    "autotest": "ava --verbose --watch",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.23.0",
+    "babel-preset-env": "^1.1.8",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nyc": "^11.2.1"
+  },
+  "keywords": [
+    "copy",
+    "assign",
+    "shortcut",
+    "utility",
+    "helper"
+  ],
+  "ava": {
+    "timeout": "10m",
+    "files": [
+      "app/**/*Spec.js",
+      "lib/**/*Spec.js",
+      "*Spec.js"
+    ],
+    "source": [
+      "**/*.{js,jsx}"
+    ],
+    "babel": {
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}
