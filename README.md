@@ -63,7 +63,7 @@ const properties = {
   name: undefined  // use `undefined` for properties with no meaningful default
 }
 
-// A class with a (smart) copy-constructor
+// A class with a (smart) copy constructor
 class Target {
   constructor(data) {
     smartCopy(this, properties, data)
